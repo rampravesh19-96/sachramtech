@@ -48,7 +48,7 @@ export default function Home() {
     <h2 className="text-3xl font-bold mb-8">Contact Us</h2>
     <p className="mb-8">Get in touch to discuss your project or request a quote.</p>
     <div className="flex flex-col md:flex-row justify-center gap-6">
-      <a href="mailto:hello@sachramtech.com" className="bg-blue-900 text-white px-6 py-3 rounded-md hover:bg-blue-800 transition">
+      <a href="mailto:hello.sachramtech@outlook.com" className="bg-blue-900 text-white px-6 py-3 rounded-md hover:bg-blue-800 transition">
         Email Us
       </a>
       <a href="tel:+919999999999" className="bg-blue-900 text-white px-6 py-3 rounded-md hover:bg-blue-800 transition">
