@@ -30,11 +30,11 @@ const Header = () => {
           <Image src={logo} alt="Sachram Technologies" width={50} height={50} />
           <span className="hidden lg:inline font-bold text-xl">Sachram Technologies</span>
         </Link>
-        <nav className="space-x-6">
+        <nav className="space-x-4">
           <button onClick={() => handleScroll("hero")} className="hover:underline">Home</button>
           <button onClick={() => handleScroll("services")} className="hover:underline">Services</button>
           <button onClick={() => handleScroll("contact")} className="hover:underline">Contact</button>
-          <Link href="/policy" className="hover:underline">Privacy Policy</Link>
+          <Link href="/policy" className="hover:underline">Policy</Link>
         </nav>
       </div>
     </header>
