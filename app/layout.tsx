@@ -3,7 +3,10 @@ import "./globals.css";
 
 export const metadata = {
   title: "Sachram Technologies | Website & App Development",
-  description: "Professional IT solutions: websites, mobile apps, UI/UX design.",
+  description: "Sachram Technologies provides professional IT solutions including websites, mobile apps, and UI/UX design for businesses.",
+  verification: {
+    google: "A9z6GytTUG0pgz_OxLuNKAuQmxP-Nd3q-IczTKDrSKA",
+  },
 };
 
 export default function RootLayout({
