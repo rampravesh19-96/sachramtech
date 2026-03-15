@@ -9,7 +9,9 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
         <div className="flex items-center space-x-2">
           <Image src={logo} alt="Sachram Technologies" width={50} height={50} />
-          <span className="font-bold text-xl">Sachram Technologies</span>
+         <span className="hidden lg:inline font-bold text-xl">
+  Sachram Technologies
+</span>
         </div>
         <nav className="space-x-6">
           <Link href="/">Home</Link>
