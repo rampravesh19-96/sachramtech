@@ -1,0 +1,31 @@
+export type OfferLetter = {
+  companyName: string;
+  companyTagline?: string;
+  companyAddress?: string;
+  companyEmail?: string;
+  companyPhone?: string;
+  companyWebsite?: string;
+  logoPath?: string;
+  issueDate: string;
+  candidateName: string;
+  candidateAddress?: string;
+  candidateEmail?: string;
+  candidatePhone?: string;
+  roleTitle: string;
+  department: string;
+  internshipType: string;
+  startDate: string;
+  endDate: string;
+  stipend: string;
+  managerName?: string;
+  managerTitle?: string;
+  workLocation?: string;
+  workMode?: string;
+  workingHours?: string;
+  acceptanceDeadline?: string;
+  additionalTerms: string[];
+  signatureName?: string;
+  signatureTitle?: string;
+};
+
+export type RawOfferLetter = Partial<OfferLetter>;

@@ -1,5 +1,29 @@
-import Header from "./components/Header";
+import type { Metadata } from "next";
+import { Manrope, Newsreader } from "next/font/google";
 import "./globals.css";
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+});
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-newsreader",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://sachramtech.vercel.app"),
+  title: {
+    default: "Sachram Technologies",
+    template: "%s | Sachram Technologies",
+  },
+  description:
+    "Sachram Technologies designs and builds modern websites, product experiences, mobile apps, and custom software for growing businesses.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -7,45 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        {/* Google Verification */}
-        <meta
-          name="google-site-verification"
-          content="A9z6GytTUG0pgz_OxLuNKAuQmxP-Nd3q-IczTKDrSKA"
-        />
-
-        {/* Basic Meta */}
-        <title>Sachram Technologies | Website & App Development</title>
-        <meta
-          name="description"
-          content="Website and App Development Solutions by Sachram Technologies. We provide professional IT solutions including websites, mobile apps, and UI/UX design."
-        />
-        <link rel="icon" href="/favicon.ico" />
-
-        {/* Open Graph / Facebook / LinkedIn */}
-        <meta property="og:title" content="Sachram Technologies | IT Solutions" />
-        <meta
-          property="og:description"
-          content="We provide professional IT solutions including websites, mobile apps, and UI/UX design to help businesses grow."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sachramtech.vercel.app/" />
-        <meta property="og:image" content="https://sachramtech.vercel.app/banner.png" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sachram Technologies | IT Solutions" />
-        <meta
-          name="twitter:description"
-          content="We provide professional IT solutions including websites, mobile apps, and UI/UX design to help businesses grow."
-        />
-        <meta name="twitter:image" content="https://sachramtech.vercel.app/banner.png" />
-      </head>
-      <body>
-        <Header />
-        {children}
-      </body>
+    <html lang="en" className={`${manrope.variable} ${newsreader.variable}`}>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

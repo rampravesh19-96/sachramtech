@@ -1,0 +1,33 @@
+{
+  "companyName": "Sachram Technologies",
+  "companyTagline": "Digital Products | Engineering | Design",
+  "companyAddress": "2nd Floor, Meridian Business Hub, Hitech City Main Road, Hyderabad, Telangana 500081",
+  "companyEmail": "sachramtech@gmail.com",
+  "companyPhone": "+91 73208 63504",
+  "companyWebsite": "www.sachramtech.vercel.app",
+  "logoPath": "/logo.svg",
+  "issueDate": "14 April 2026",
+  "candidateName": "Aanya Sharma",
+  "candidateAddress": "Flat 6B, Oak Residency,\nMadhapur, Hyderabad 500081",
+  "candidateEmail": "aanya.sharma@example.com",
+  "candidatePhone": "+91 98765 43210",
+  "roleTitle": "Product Design Intern",
+  "department": "Design & Experience",
+  "internshipType": "Full-time Internship",
+  "startDate": "04 May 2026",
+  "endDate": "31 July 2026",
+  "stipend": "INR 18,000 per month",
+  "managerName": "Meghana Reddy",
+  "managerTitle": "Lead Product Designer",
+  "workLocation": "Hyderabad Office",
+  "workMode": "Hybrid",
+  "workingHours": "Monday to Friday, 10:00 AM to 6:30 PM",
+  "acceptanceDeadline": "18 April 2026",
+  "additionalTerms": [
+    "You are expected to follow company confidentiality, conduct, and information-security requirements throughout the internship term.",
+    "Any leave or absence should be approved by the reporting manager in advance, except in the event of an emergency.",
+    "An internship certificate and experience confirmation will be issued subject to satisfactory performance and proper handover of assigned work."
+  ],
+  "signatureName": "R. Sachin",
+  "signatureTitle": "Founder & Hiring Manager"
+}
