@@ -59,7 +59,7 @@ export default function Header() {
 
           <nav className="hidden items-center gap-6 lg:flex">
             {primaryNav.map((item) =>
-              "sectionId" in item ? (
+              typeof item.sectionId === "string" ? (
                 <button
                   key={item.label}
                   type="button"
@@ -114,7 +114,7 @@ export default function Header() {
           <div className="border-t border-slate-200 py-4 lg:hidden">
             <div className="flex flex-col gap-2">
               {primaryNav.map((item) =>
-                "sectionId" in item ? (
+                typeof item.sectionId === "string" ? (
                   <button
                     key={item.label}
                     type="button"

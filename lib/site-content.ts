@@ -1,6 +1,12 @@
+type PrimaryNavItem = {
+  label: string;
+  href: string;
+  sectionId?: string;
+};
+
 export const company = {
   name: "Sachram Technologies",
-  tagline: "Product engineering, software delivery, and design for ambitious teams.",
+  tagline: "Web, product, and software work shaped with clarity and care.",
   email: "sachramtech@gmail.com",
   phone: "+91 73208 63504",
   whatsapp: "https://wa.me/917320863504",
@@ -11,50 +17,56 @@ export const company = {
 };
 
 export const heroPillars = [
-  "Product strategy that stays grounded in delivery reality",
-  "Interface and brand presentation that feels credible from first contact",
-  "Engineering quality shaped for launch, iteration, and long-term support",
+  "Clear product and website thinking before unnecessary complexity enters the work",
+  "Design choices that help the business look credible from the first interaction",
+  "Engineering decisions made for launch readiness, stability, and useful iteration",
 ] as const;
 
-export const primaryNav = [
+export const primaryNav: readonly PrimaryNavItem[] = [
   { label: "Services", href: "/services" },
-  { label: "Process", href: "/#process", sectionId: "process" },
+  { label: "How We Work", href: "/how-we-work" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
-] as const;
+];
 
 export const serviceCards = [
   {
+    slug: "web-development",
     title: "Web Development",
     description:
-      "Responsive websites, product platforms, dashboards, and internal tools built for speed, clarity, and long-term maintainability.",
-    highlights: ["Next.js applications", "Responsive frontends", "Admin dashboards"],
+      "Websites, platforms, dashboards, and portals built to communicate clearly and work reliably in day-to-day use.",
+    highlights: ["Company websites", "Web platforms", "Admin dashboards"],
   },
   {
+    slug: "mobile-app-development",
     title: "Mobile App Development",
     description:
-      "Mobile experiences designed to feel polished, useful, and reliable across modern iOS and Android usage patterns.",
-    highlights: ["Cross-platform builds", "Customer apps", "Operational mobility"],
+      "Mobile product experiences designed around real user flow, practical functionality, and reliable execution.",
+    highlights: ["Customer apps", "Operational tools", "Cross-platform delivery"],
   },
   {
+    slug: "ui-ux-design",
     title: "UI/UX Design",
     description:
-      "Interface systems, product flows, and visual direction that improve usability while keeping the brand credible and refined.",
-    highlights: ["Product UX", "Design systems", "Conversion-focused layouts"],
+      "Interfaces, journeys, and design systems that improve usability while strengthening the overall quality of the experience.",
+    highlights: ["Product UX", "Interface systems", "Experience refinement"],
   },
   {
+    slug: "custom-software-development",
     title: "Custom Software Solutions",
     description:
-      "Tailored systems for teams that have outgrown generic tools and need software aligned to the way their business actually works.",
-    highlights: ["Workflow automation", "Internal systems", "Operational software"],
+      "Tailored internal tools and workflow systems for teams that need software shaped around how the business actually runs.",
+    highlights: ["Workflow systems", "Internal tools", "Operational software"],
   },
   {
+    slug: "product-development",
     title: "Product Development",
     description:
       "From initial concept to launch-ready product, with support across planning, design, engineering, and release execution.",
     highlights: ["MVP development", "Feature delivery", "Launch readiness"],
   },
   {
+    slug: "maintenance-support",
     title: "Maintenance & Support",
     description:
       "Ongoing improvements, issue resolution, performance tuning, and post-launch support that keep products stable and evolving.",
@@ -64,24 +76,24 @@ export const serviceCards = [
 
 export const differentiators = [
   {
-    title: "Structured delivery",
+    title: "Organized from the beginning",
     description:
-      "We work with clear milestones, defined ownership, and practical communication so projects stay organized from start to finish.",
+      "We work with sensible milestones, clear ownership, and practical communication so the project stays understandable as it moves.",
   },
   {
-    title: "Business-aware execution",
+    title: "Business-aware decisions",
     description:
-      "We do not just ship screens and features. We pay attention to business goals, workflow reality, and the customer experience behind the build.",
+      "We pay attention to the role the product, website, or system needs to play for the business, not just the surface output.",
   },
   {
-    title: "Design that supports trust",
+    title: "Presentation that builds confidence",
     description:
-      "Our design approach focuses on clarity, usability, and confidence so every product feels credible to the people who use it.",
+      "Our design approach focuses on clarity and composure so the finished work feels more credible to customers, teams, and stakeholders.",
   },
   {
-    title: "Long-term maintainability",
+    title: "Work that holds up after launch",
     description:
-      "We aim for codebases and product structures that remain understandable and extendable after launch, not just during delivery.",
+      "We aim for products and codebases that remain workable after release, not just during the initial delivery cycle.",
   },
 ] as const;
 
@@ -128,28 +140,28 @@ export const capabilityGroups = [
   {
     title: "What we commonly build",
     items: [
-      "Company websites and growth-focused landing pages",
-      "Customer-facing SaaS products and portals",
-      "Operational dashboards and internal tools",
-      "Brand-aligned mobile app experiences",
+      "Company websites and conversion-minded landing pages",
+      "Customer-facing products, portals, and account areas",
+      "Operational dashboards and internal software tools",
+      "Mobile experiences that support product or service delivery",
     ],
   },
   {
     title: "Who we work well with",
     items: [
-      "Early-stage founders shaping their first product",
-      "Growing businesses modernizing digital operations",
-      "Teams that need a design + development partner",
-      "Organizations that value clarity and responsiveness",
+      "Founders shaping a stronger first product or website",
+      "Growing businesses improving digital operations",
+      "Teams that need one partner across design and build",
+      "Organizations that value clarity, responsiveness, and follow-through",
     ],
   },
   {
     title: "What clients usually need",
     items: [
-      "Sharper product positioning and user experience",
-      "Reliable execution with regular communication",
-      "Systems that scale beyond quick prototypes",
-      "A partner who can stay involved after launch",
+      "A clearer digital presence and better first impressions",
+      "More dependable execution on an important digital initiative",
+      "Systems that feel easier to use and easier to manage",
+      "A partner who can continue after the initial launch",
     ],
   },
 ] as const;
@@ -166,24 +178,24 @@ export const contactCards = [
     title: "Email",
     value: company.email,
     href: `mailto:${company.email}`,
-    description: "For project discussions, briefs, and first conversations.",
+    description: "Best for project outlines, requirements, and first discussions.",
   },
   {
     title: "Phone",
     value: company.phone,
     href: `tel:${company.phone.replace(/\s+/g, "")}`,
-    description: "For direct conversations when you want to move quickly.",
+    description: "Useful when you want to talk through the need directly.",
   },
   {
     title: "WhatsApp",
     value: "Message Sachram Technologies",
     href: company.whatsapp,
-    description: "A convenient option for quick questions and early discussions.",
+    description: "Convenient for quick questions or an early conversation.",
   },
   {
     title: "LinkedIn",
     value: "Sachram Technologies",
     href: company.linkedin,
-    description: "Follow the company and connect professionally.",
+    description: "Follow the company and connect in a professional context.",
   },
 ] as const;

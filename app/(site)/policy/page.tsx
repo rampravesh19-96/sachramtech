@@ -5,6 +5,27 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Read the privacy policy for the Sachram Technologies website and contact channels.",
+  alternates: {
+    canonical: "/policy",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
+  openGraph: {
+    title: "Sachram Technologies Privacy Policy",
+    description:
+      "Read the privacy policy for the Sachram Technologies website and contact channels.",
+    url: "https://sachramtech.vercel.app/policy",
+    images: ["/banner.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sachram Technologies Privacy Policy",
+    description:
+      "Read the privacy policy for the Sachram Technologies website and contact channels.",
+    images: ["/banner.png"],
+  },
 };
 
 export default function Policy() {

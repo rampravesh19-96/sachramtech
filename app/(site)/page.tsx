@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   capabilityGroups,
@@ -8,6 +9,29 @@ import {
   processSteps,
   serviceCards,
 } from "@/lib/site-content";
+
+export const metadata: Metadata = {
+  title: "Web Development, Mobile Apps, UI/UX Design, and Custom Software",
+  description:
+    "Sachram Technologies is a software development company helping businesses with web development, mobile app development, UI/UX design, custom software solutions, and product delivery support.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Sachram Technologies | Web Development and Custom Software",
+    description:
+      "A modern software development company offering web development, mobile app development, UI/UX design, and custom software solutions for growing businesses.",
+    url: "https://sachramtech.vercel.app/",
+    images: ["/banner.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sachram Technologies | Web Development and Custom Software",
+    description:
+      "Web development, mobile app development, UI/UX design, and custom software solutions for growing businesses.",
+    images: ["/banner.png"],
+  },
+};
 
 export default function Home() {
   return (
@@ -22,14 +46,15 @@ export default function Home() {
             <p className="text-sm font-semibold uppercase tracking-[0.32em] text-sky-700">
               Product engineering | Design | Delivery
             </p>
-            <h1 className="font-display mt-6 max-w-[12ch] text-5xl leading-[0.94] tracking-tight text-slate-950 sm:text-6xl xl:text-7xl">
-              Digital products and company websites built to earn trust fast.
-            </h1>
-            <p className="mt-7 max-w-[40rem] text-lg leading-8 text-slate-600">
-              Sachram Technologies helps businesses design, build, and improve
-              digital experiences with a strong focus on product clarity,
-              engineering quality, and professional presentation.
-            </p>
+          <h1 className="font-display mt-6 max-w-[12ch] text-5xl leading-[0.94] tracking-tight text-slate-950 sm:text-6xl xl:text-7xl">
+            Digital products and company websites built to earn trust fast.
+          </h1>
+          <p className="mt-7 max-w-[40rem] text-lg leading-8 text-slate-600">
+            Sachram Technologies helps businesses shape stronger digital
+            experiences through web development, mobile app development, UI/UX
+            design, and custom software work that feels considered from the
+            first interaction.
+          </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
@@ -128,16 +153,16 @@ export default function Home() {
           </div>
           <div className="grid gap-6 text-base leading-8 text-slate-600 lg:grid-cols-2">
             <p>
-              {company.name} works at the intersection of product design,
-              software execution, and business presentation. We help companies
-              build the digital surfaces that shape how customers, teams, and
-              partners experience the business.
+              {company.name} works where product thinking, software delivery,
+              and presentation quality meet. We help companies build websites,
+              interfaces, and software systems that shape how the business is
+              understood and how the work actually gets done.
             </p>
             <p>
-              Whether the need is a sharper company website, a product interface,
-              a custom operational system, or a modernized app experience, our
-              focus is the same: thoughtful delivery, strong fundamentals, and a
-              result that feels professional from day one.
+              Whether the need is a sharper company website, a product
+              experience, or a more useful internal tool, our focus is the same:
+              thoughtful decisions, strong fundamentals, and a result that feels
+              ready for real use.
             </p>
           </div>
         </div>
@@ -160,8 +185,9 @@ export default function Home() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {serviceCards.map((service) => (
-              <article
+              <Link
                 key={service.title}
+                href={`/${service.slug}`}
                 className="group rounded-[1.9rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-7 transition hover:-translate-y-1 hover:border-sky-300/30 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.04))]"
               >
                 <div className="flex items-center justify-between gap-4">
@@ -188,7 +214,10 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-              </article>
+                <p className="mt-6 text-sm font-semibold text-sky-300">
+                  Learn more
+                </p>
+              </Link>
             ))}
           </div>
         </div>
@@ -232,6 +261,10 @@ export default function Home() {
             <h2 className="font-display mt-5 max-w-[15ch] text-4xl tracking-tight text-slate-950 sm:text-5xl">
               A delivery process designed to reduce confusion and improve output quality.
             </h2>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600">
+              This is the short version. The full delivery page explains how we
+              structure collaboration, review, and launch in more detail.
+            </p>
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -253,6 +286,15 @@ export default function Home() {
                 </p>
               </article>
             ))}
+          </div>
+
+          <div className="mt-10">
+            <Link
+              href="/how-we-work"
+              className="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
+            >
+              Read how we work
+            </Link>
           </div>
         </div>
       </section>
@@ -341,11 +383,11 @@ export default function Home() {
                 <h2 className="font-display mt-5 max-w-[14ch] text-4xl tracking-tight text-white sm:text-5xl">
                   If you need a sharper digital presence or a dependable delivery partner, let&apos;s talk.
                 </h2>
-                <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-                  Tell us what you are building, what needs improvement, or where
-                  your current product or website is falling short. We can help
-                  you shape a practical next step.
-                </p>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+              Tell us what you are building, what needs improvement, or where
+              the current product, website, or system is falling short. We can
+              help you shape a sensible next step.
+            </p>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">

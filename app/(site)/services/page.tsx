@@ -3,9 +3,26 @@ import Link from "next/link";
 import { company, processSteps, serviceCards } from "@/lib/site-content";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Services and Capabilities",
   description:
-    "Explore Sachram Technologies services across web development, mobile apps, UI/UX design, custom software, and digital product delivery.",
+    "Explore Sachram Technologies services across web development, mobile app development, UI/UX design, custom software solutions, and digital product delivery.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Sachram Technologies Services",
+    description:
+      "Explore web development, mobile app development, UI/UX design, custom software solutions, and digital product delivery services.",
+    url: "https://sachramtech.vercel.app/services",
+    images: ["/banner.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sachram Technologies Services",
+    description:
+      "Web development, mobile app development, UI/UX design, and custom software solutions for growing businesses.",
+    images: ["/banner.png"],
+  },
 };
 
 export default function ServicesPage() {
@@ -17,12 +34,12 @@ export default function ServicesPage() {
             Services
           </p>
           <h1 className="font-display mt-6 max-w-4xl text-5xl tracking-tight text-slate-950 sm:text-6xl">
-            Digital services designed to help growing companies present better,
-            operate better, and ship with confidence.
+            Services for teams that need stronger digital execution, not just extra output.
           </h1>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-slate-600">
-            We work across design and delivery, helping businesses strengthen
-            their public-facing presence and the digital systems behind it.
+            This page gives a clear overview of the kinds of work we take on,
+            what each service is meant to solve, and where a deeper
+            service-specific conversation may be useful.
           </p>
         </div>
       </section>
@@ -54,6 +71,12 @@ export default function ServicesPage() {
                     </span>
                   ))}
                 </div>
+                <Link
+                  href={`/${service.slug}`}
+                  className="mt-6 inline-flex items-center rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
+                >
+                  View {service.title}
+                </Link>
               </article>
             ))}
           </div>
@@ -63,10 +86,15 @@ export default function ServicesPage() {
       <section className="border-y border-slate-200 bg-slate-50 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-4xl tracking-tight text-slate-950">
-            Delivery process
+            How services are typically delivered
           </h2>
+          <p className="mt-4 max-w-2xl text-base leading-8 text-slate-600">
+            The process stays tailored to the engagement, but the same delivery
+            logic usually applies: understand the need, shape the right
+            approach, and move in structured stages.
+          </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {processSteps.map((step) => (
+            {processSteps.slice(0, 3).map((step) => (
               <article
                 key={step.step}
                 className="rounded-[1.75rem] border border-slate-200 bg-white p-7"
@@ -102,7 +130,19 @@ export default function ServicesPage() {
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-200"
               >
-                Talk to us
+                Discuss your requirements
+              </Link>
+              <Link
+                href="/how-we-work"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Review the delivery approach
+              </Link>
+              <Link
+                href="/faq"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Read common questions
               </Link>
               <a
                 href={`mailto:${company.email}`}

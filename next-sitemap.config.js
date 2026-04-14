@@ -1,6 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://sachramtech.vercel.app',
-  generateRobotsTxt: true, // optional
+  siteUrl: "https://sachramtech.vercel.app",
+  generateRobotsTxt: true,
   sitemapSize: 7000,
+  exclude: ["/offer-letter", "/policy"],
 };

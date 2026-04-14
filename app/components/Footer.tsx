@@ -31,8 +31,9 @@ export default function Footer() {
               Company
             </p>
             <p className="mt-5 max-w-md text-sm leading-7 text-slate-400">
-              We help businesses launch better digital products, strengthen their
-              web presence, and improve the quality of the systems they rely on.
+              We help businesses launch better digital products, strengthen
+              their web presence, and improve the quality of the systems they
+              rely on.
             </p>
           </div>
 
@@ -54,6 +55,11 @@ export default function Footer() {
                 </li>
               ))}
               <li>
+                <Link href="/faq" className="transition hover:text-white">
+                  FAQ
+                </Link>
+              </li>
+              <li>
                 <Link href="/policy" className="transition hover:text-white">
                   Privacy Policy
                 </Link>
@@ -67,7 +73,14 @@ export default function Footer() {
             </h3>
             <ul className="mt-5 space-y-3 text-sm text-slate-300">
               {serviceCards.slice(0, 4).map((service) => (
-                <li key={service.title}>{service.title}</li>
+                <li key={service.title}>
+                  <Link
+                    href={`/${service.slug}`}
+                    className="transition hover:text-white"
+                  >
+                    {service.title}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
@@ -95,7 +108,10 @@ export default function Footer() {
                 </a>
               </p>
               <p>
-                <a href={company.linkedin} className="transition hover:text-white">
+                <a
+                  href={company.linkedin}
+                  className="transition hover:text-white"
+                >
                   LinkedIn
                 </a>
               </p>
@@ -104,7 +120,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-slate-800 pt-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 Sachram Technologies. All rights reserved.</p>
+          <p>&copy; 2026 Sachram Technologies. All rights reserved.</p>
           <p>Built to support modern product, software, and design delivery.</p>
         </div>
       </div>
